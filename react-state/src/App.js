@@ -33,11 +33,11 @@ function App() {
     setBBs({ ...bbsVO, [name]: value });
 
     // 아래의 중복되는 if를 사용한 코드를 단순화 시킬 수 있다
-    // if (name === "b_date") {
-    //   setBBs({ ...bbsVO, b_date: value });
-    // } else if (name === "b_time") {
-    //   setBBs({ ...bbsVO, b_time: value });
-    // }
+    if (name === "b_date") {
+      setBBs({ ...bbsVO, b_date: value });
+    } else if (name === "b_time") {
+      setBBs({ ...bbsVO, b_time: value });
+    }
   };
 
   /**
