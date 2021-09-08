@@ -58,8 +58,15 @@ function RemList() {
    * react야 함수()를 네가(useCallback) 보관하고 있다가
    * 다음에 내가 또 함수() 가 필요할때 나에게 다시 달라
    *
+   * memoization
    * 함수() 가 이미 이전에 한번이라도 생성된 적이 있으면
    * 재 활용을 하고 없을때만 만들어서 사용하겠다 라는 의미
+   *
+   * react는 화면이 렌더링 될때마다 함수들이 생성된다
+   * 기존에 있던 함수는 버려지고 새로운 함수가 계속해서 반복 생성된다
+   *
+   * useCallback()으로 감싼 함수는 memoization되어
+   * 코드나 값이 변경되지 않으면 함수코드를 재 사용(활용)하게 된다
    */
   const rem_header = useCallback(() => {
     // 제목배열을 map()를 이용하여 forEach하기
