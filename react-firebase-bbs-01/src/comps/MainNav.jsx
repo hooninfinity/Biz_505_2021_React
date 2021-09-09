@@ -11,7 +11,7 @@ function MainNav() {
         </NavLink>
       </li>
       <li>
-        <NavLink exact to="/writer" activeClassName="active_nav">
+        <NavLink exact to="/write" activeClassName="active_nav">
           글쓰기
         </NavLink>
       </li>
