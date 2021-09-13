@@ -1,0 +1,17 @@
+div.main_input input {
+  width: 90%;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+table.main_list {
+  width: 90%;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+
+table.main_list th,
+td {
+  padding: 10px;
+}
