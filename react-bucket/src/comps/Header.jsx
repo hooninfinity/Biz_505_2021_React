@@ -4,7 +4,7 @@ function Header() {
   return (
     <div>
       <header className="App-header">
-        <h1>REACT BBS 2021</h1>
+        <h1>MY BUCKET LIST</h1>
       </header>
     </div>
   );
