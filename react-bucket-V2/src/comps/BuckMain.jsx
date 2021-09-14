@@ -91,7 +91,7 @@ function BuckMain() {
    * 변수에는 우리나라 라는 문자열이 담기게 된다
    *
    * 변수 = "대한민국" || "우리나라" 이런 코드를 만나면
-   * 앞단에서 이미 true가
+   * 앞단에서 이미 true가 앞단에서 이미 true가 연산되고 변수에는 대한민국 문자열이 담기게 된다
    */
 
   const bucket_complete = (id) => {
@@ -135,8 +135,8 @@ function BuckMain() {
   return (
     <div className="w3-container-fluid">
       <BuckInput buck_insert={buck_insert} />
-      {/* BucketList 컴포넌트에 bucketList 상태(변수) 전달하기 */}
-      {/* BucketItem.jsx에서 실행할 flag_change() bucket_update() 함수를
+      {/* BuckList 컴포넌트에 bucketList 상태(변수) 전달하기 */}
+      {/* BuckItem.jsx에서 실행할 flag_change() bucket_update() 함수를
 	   매개변수로 전달하기 */}
       <BuckList args={args} />
     </div>

@@ -9,6 +9,7 @@ var logger = require("morgan");
  * 발생할 수 있는 ISSUE
  *
  * XSS 공격
+ *
  */
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -31,6 +32,7 @@ const mongAtlas =
   `:${mongoConfig.PASSWORD}` +
   `@cluster0.6wur6.mongodb.net/myFirstDatabase` +
   `?retryWrites=true&w=majority`;
+console.log(mongAtlas);
 // mongoose.connect("mongodb://localhost:27017/dbms");
 mongoose.connect(mongAtlas);
 
@@ -45,7 +47,6 @@ const whiteList = [
   "http://localhost:4000",
   "https://hoon.com:15500",
 ];
-
 const corsOption = {
   origin: (origin, callback) => {
     const isWhiteList = whiteList.indexOf(origin) !== -1;
