@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import BuckList from "./BuckList";
 import BuckInput from "./BuckInput";
 import uuid from "react-uuid";
@@ -6,7 +6,7 @@ import moment from "moment";
 
 function BuckMain() {
   // 버킷리스트를 담을 배열
-  const [bucketList, setBucketList] = useState([]);
+  const [bucketList, setBuckList] = useState([]);
 
   const bucketFetch = useCallback(async () => {
     const res = await fetch("http://localhost:5000/data");
@@ -28,7 +28,7 @@ function BuckMain() {
       b_cancel: false,
     };
     // 원래있던 bucketList에 새로운 bucket을 추가하기
-    await setBucketList([...bucketList, bucket]);
+    await setBuckList([...bucketList, bucket]);
 
     const fetch_option = {
       method: "POST",
@@ -57,15 +57,15 @@ function BuckMain() {
       }
     });
     // 원래의 bucketList를 _bucketList로 바꾸기
-    setBucketList(_bucketList);
+    setBuckList(_bucketList);
   };
 
   /*
    int[] nums = {1,2,3,4,5,6,7}
    for(int i = 0 ; i < nums.length ; i++) {
-	   if(nums[i]) {
-		   
-	   }
+	   if(nums[i] == 3) {
+		  break;
+	  }
    }
    */
 
@@ -85,7 +85,7 @@ function BuckMain() {
       }
     });
     // 원래의 list를 새로운 list로 바꾸기
-    setBucketList(_bucketList);
+    setBuckList(_bucketList);
   };
 
   /**
@@ -126,7 +126,7 @@ function BuckMain() {
         return bucket;
       }
     });
-    setBucketList(_bucketList);
+    setBuckList(_bucketList);
   };
 
   const bucket_cancel = (id) => {
@@ -140,7 +140,7 @@ function BuckMain() {
         return bucket;
       }
     });
-    setBucketList(_bucketList);
+    setBuckList(_bucketList);
   };
 
   const args = {
