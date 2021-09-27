@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { RenderSquare } from "../modules/main";
 
 function Board() {
-  const [squares, setSquares] = useState(Array(9).fill("A"));
+  const [squares, setSquares] = useState(Array(9).fill(null));
 
   // squares 배열의 index 번째 요소의 값을
   // 변경하려고 한다
