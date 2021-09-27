@@ -1,10 +1,11 @@
 import React from "react";
 
-function CounterInput({ setNumber }) {
+function CounterInput(props) {
+  const { setCount } = props;
+
   const onChangeHandler = (e) => {
     const number = e.target.value;
-    console.log(number);
-    setNumber(number);
+    setCount(number);
   };
   return (
     <div>

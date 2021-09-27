@@ -1,10 +1,16 @@
 import React from "react";
 
-function CounterView() {
+function CounterView({ number }) {
+  const intNum = parseInt(number);
+
   return (
     <div>
-      <div>와 20의 합 : </div>
-      <div>와 의 곱 : </div>
+      <div>
+        {intNum} 와 20의 합 :{intNum + 20}
+      </div>
+      <div>
+        {intNum} 와 {intNum} 의 곱 : {intNum * intNum}
+      </div>
     </div>
   );
 }
