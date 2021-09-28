@@ -10,11 +10,19 @@ function App() {
     u_tel: "",
     u_age: 0,
   });
+
+  const [addrList, setAddrList] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <AddressInput address={address} setAddress={setAddress} />
-        <AddressView address={address} />
+        <AddressInput
+          address={address}
+          setAddress={setAddress}
+          addrList={addrList}
+          setAddrList={setAddrList}
+        />
+        <AddressView addrList={addrList} />
       </header>
     </div>
   );
