@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function AddressInput({ address, setAddress }) {
   const onChangeHandler = (e) => {
@@ -21,6 +21,8 @@ function AddressInput({ address, setAddress }) {
     setAddress({ ...address, [name]: value });
   };
 
+  const [addrList, setAddrList] = useState([]);
+
   return (
     <div className="input_form">
       <div>
@@ -40,7 +42,7 @@ function AddressInput({ address, setAddress }) {
         <input name="u_age" type="text" onChange={onChangeHandler} />
       </div>
       <div>
-        <button onClick={onChangeHandler}>추가버튼</button>
+        <button onClick={setAddrList([...addrList])}>추가버튼</button>
       </div>
     </div>
   );
