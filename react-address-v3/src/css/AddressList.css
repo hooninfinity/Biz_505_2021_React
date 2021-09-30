@@ -1,0 +1,14 @@
+table.address_list {
+  width: 80vw;
+  border: 1px solid #ddd;
+  margin: 10px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.address_list th {
+  background-color: #22b8cf;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #777;
+}

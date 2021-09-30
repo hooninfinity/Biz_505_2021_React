@@ -17,7 +17,7 @@ function AddressInput({ stateGroup }) {
   };
 
   return (
-    <div>
+    <div className="input_box">
       <input
         value={address.a_name}
         name="a_name"

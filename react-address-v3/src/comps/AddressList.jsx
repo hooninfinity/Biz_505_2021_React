@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/AddressList.css";
 
 // 비구조화
 // const {addrBook} = props 대신 직접 분해하면서 받기
@@ -16,7 +17,7 @@ function AddressList({ addrBook }) {
   });
 
   return (
-    <table>
+    <table className="address_list">
       <thead>
         <tr>
           <th>ID</th>
