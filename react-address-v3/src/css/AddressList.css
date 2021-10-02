@@ -7,8 +7,18 @@ table.address_list {
 }
 
 table.address_list th {
-  background-color: #22b8cf;
+  background-color: #fbbc05;
+  color: white;
   padding: 10px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #eee;
+}
+
+table.address_list tr td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+
+table.address_list tr:nth-of-type(even) {
 }

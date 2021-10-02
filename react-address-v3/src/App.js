@@ -7,12 +7,12 @@ import UUID from "react-uuid";
 import BackImage from "../src/image/header_background.jpg";
 
 function App() {
-  const backgroundStyle = {
-    backgroundImage: `url(${BackImage})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundAttachment: `scroll`,
-    backgroundSize: "100%",
-  };
+  // const backgroundStyle = {
+  //   backgroundImage: `url(${BackImage})`,
+  //   backgroundRepeat: `no-repeat`,
+  //   backgroundAttachment: `scroll`,
+  //   backgroundSize: "100%",
+  // };
 
   // 주소 한개의 데이터를 저장할 state 선언하기
   const [address, setAddress] = useState({
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header" style={backgroundStyle}></header>
+      <header className="App-header">React-Address-v3</header>
       <AddressInput stateGroup={stateGroup} />
       <AddressList addrBook={addrBook} />
     </div>
