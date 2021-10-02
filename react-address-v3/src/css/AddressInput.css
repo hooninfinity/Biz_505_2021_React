@@ -1,0 +1,19 @@
+div.input_box {
+  width: 80vw;
+  height: 5vh;
+  margin: 10px auto;
+  display: flex;
+}
+
+div.input_box input {
+  flex: 1;
+  margin-right: 5px;
+}
+
+div.input_box button {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}

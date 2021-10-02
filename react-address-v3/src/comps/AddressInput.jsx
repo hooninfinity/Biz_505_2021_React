@@ -1,4 +1,5 @@
 import UUID from "react-uuid";
+import "../css/AddressInput.css";
 
 // 방법은 여러가지 있다. props를 통해 통째로 받거나, stateGroup을 받아 분해하거나
 // function AddressInput(props) {
