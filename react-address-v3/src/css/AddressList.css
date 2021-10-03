@@ -17,8 +17,8 @@ table.address_list th {
 table.address_list tr td {
   padding: 10px;
   border-bottom: 1px solid #eee;
-  background-color: white;
 }
 
 table.address_list tr:nth-of-type(even) {
+  background-color: #f0ece6;
 }
