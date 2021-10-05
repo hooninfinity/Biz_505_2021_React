@@ -1,0 +1,21 @@
+form {
+  display: inline-block;
+  width: 70vw;
+  margin: 20px auto;
+}
+
+input.input_id,
+input.input_password {
+  width: 50vw;
+  height: 5vh;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+button {
+  width: 50vw;
+  height: 5vh;
+  background-color: rgb(50, 218, 50);
+  color: white;
+  border: none;
+}
