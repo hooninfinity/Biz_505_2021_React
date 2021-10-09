@@ -4,7 +4,7 @@ import React from "react";
  * props 전달받은 변수에 기본값을 지정하여
  * props 값이 전달되지 않더라도 기본을 설정할수 있도록 기본값 설정하기
  */
-function Button({
+function MyButton({
   children,
   backgroundColor = "blue", // 기본값 설정
   color = "#fff", // 기본값
@@ -24,11 +24,12 @@ function Button({
     borderRadius: "5px",
     backgroundColor: backgroundColor,
   };
+
   return (
-    <button style={MyButtonStyle} onClick={onClick}>
+    <button style={MyButton} onClick={onClick}>
       {children}
     </button>
   );
 }
 
-export default Button;
+export default MyButton;

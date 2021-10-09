@@ -1,5 +1,5 @@
 const fetchLogin = async (userid, password) => {
-  const res = await fetch("http://localhost:8080/users/login", {
+  const response = await fetch("http://localhost:8080/users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,15 +12,16 @@ const fetchLogin = async (userid, password) => {
     }),
   });
 
-  if (res?.ok) {
-    const resultUser = res.json();
+  if (response?.ok) {
+    const resultUser = response.json();
+    console.log("result", resultUser);
     return resultUser;
   } else {
     return [];
   }
 };
 
-const fetchJoin = (joinData) => {
+const fetchJoin = async (joinData) => {
   const response = await fetch("http://localhost:8080/users/join", {
     method: "POST",
     headers: {
@@ -31,12 +32,11 @@ const fetchJoin = (joinData) => {
 
   if (response.ok) {
     const result = await response.json();
-    // alert(JSON.stringify(json));
     return result;
   }
 };
 
-const fetchUser = () => {
+const fetchUser = async () => {
   const response = await fetch("http://localhost:8080/users", {
     method: "POST",
     headers: {
@@ -48,8 +48,8 @@ const fetchUser = () => {
   return response.json();
 };
 
-const fetchLogout = () => {
-  const res = await fetch("http://localhost:8080/users/logout", {
+const fetchLogout = async () => {
+  const response = await fetch("http://localhost:8080/users/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -57,5 +57,7 @@ const fetchLogout = () => {
     },
     credentials: "include",
   });
-  return res.json();
+  return response.json();
 };
+
+export { fetchJoin, fetchLogin, fetchUser, fetchLogout };

@@ -2,6 +2,7 @@ import "../css/LoginForm.css";
 import { useState } from "react";
 import { useUserContext } from "../context/UserContextProvider";
 import { useHistory } from "react-router-dom";
+import { fetchLogin } from "../modules/fetchMoudle";
 
 function LoginForm() {
   const { setUser } = useUserContext();
@@ -12,24 +13,29 @@ function LoginForm() {
 
   const history = useHistory();
 
-  const onChange = (e) => {
+  const onChage = (e) => {
     setAccount({ ...account, [e.target.name]: e.target.value });
   };
 
-  const onLogin = async (e) => {};
+  const onLogin = async (e) => {
+    const { userid, password } = account;
+    const resultUser = await fetchLogin(userid, password);
+    await setUser(resultUser);
+    history.replace("/");
+  };
 
   return (
     <div className="login_form">
       <input
         name="userid"
         placeholder="아이디를 입력하세요"
-        onChange={onChange}
+        onChange={onChage}
       />
       <input
         name="password"
         type="password"
-        placeholder="비밀번호를 입력하세요"
-        onChange={onChange}
+        placeholder="비빌번호를 입력하세요"
+        onChange={onChage}
       />
       <button onClick={onLogin}>로그인</button>
     </div>

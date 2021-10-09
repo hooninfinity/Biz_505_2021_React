@@ -1,6 +1,7 @@
 import "../css/JoinForm.css";
-
 import React, { useState } from "react";
+import { fetchJoin } from "../modules/fetchMoudle";
+import { useHistory } from "react-router-dom";
 
 function JoinForm() {
   const [joinUser, setJoinUser] = useState({
@@ -10,13 +11,15 @@ function JoinForm() {
     email: "",
   });
 
+  const history = useHistory();
+
   const onChangeAccount = (e) => {
     const { name, value } = e.target;
     setJoinUser({ ...joinUser, [name]: value });
   };
 
   const onSubmitAccount = async (e) => {
-    //   if(joinUser.userid === "") {
+    // if(joinUser.userid === "") {
     if (!joinUser?.userid) {
       alert("아이디를 입력해야 합니다");
       return;
@@ -27,12 +30,12 @@ function JoinForm() {
       return;
     }
 
-    if (!joinUser?.re_password) {
+    if (!joinUser.re_password) {
       alert("비밀번호 확인을 입력해 주세요");
       return;
     }
 
-    if (joinUser?.password !== joinUser.re_password) {
+    if (joinUser.password !== joinUser.re_password) {
       alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
       return;
     }
@@ -46,6 +49,8 @@ function JoinForm() {
       password: joinUser.password,
       email: joinUser.email,
     };
+    fetchJoin(joinData);
+    history.replace("/login");
   };
 
   return (
@@ -74,7 +79,7 @@ function JoinForm() {
         name="email"
         type="email"
         value={joinUser.email}
-        placeholder="E-mail을 입력해주세요"
+        placeholder="E-mail을 입력해 주세요"
         onChange={onChangeAccount}
       />
 
