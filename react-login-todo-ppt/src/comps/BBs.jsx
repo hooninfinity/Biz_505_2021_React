@@ -8,10 +8,10 @@ function BBs() {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <h1>자유게시판</h1>
         <h3>USERID : {user.userid}</h3>
-      </div>
+      </div> */}
       <TodoMain header="My TodoList" form={<TodoInput />}>
         <TodoList />
       </TodoMain>

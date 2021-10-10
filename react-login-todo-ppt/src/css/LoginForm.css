@@ -1,6 +1,7 @@
 div.login_form {
   margin: 20px auto;
   padding: 20px;
+  background-color: beige;
 }
 
 div.login_form input {

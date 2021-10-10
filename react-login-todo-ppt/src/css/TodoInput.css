@@ -21,7 +21,8 @@
 
   margin-left: 1rem;
 
-  background-color: #22b8cf;
+  /* background-color: #22b8cf; */
+  background-color: #03c75a;
   border-radius: 3px;
   color: white;
   font-weight: 600;
@@ -29,5 +30,7 @@
 }
 
 .btn_insert:hover {
-  background-color: #3bc9db;
+  background-color: white;
+  color: #03c75a;
+  border: 1px solid #03c75a;
 }
