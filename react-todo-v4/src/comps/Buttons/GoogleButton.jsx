@@ -45,10 +45,10 @@ function GoogleButton() {
         // 원하는 곳으로 redirect
       }
 
-      auth2.attachClickHandler(buttonRef.current, {}, googleResponse);
+      await auth2.attachClickHandler(buttonRef.current, {}, googleResponse);
     });
   };
-  useEffect(googleSDK_init, []);
+  useEffect(googleSDK_init, [googleSDK_init]);
 
   const logout = () => {
     const auth2 = window.gapi.auth2.getAuthInstance();

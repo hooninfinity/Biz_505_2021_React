@@ -36,7 +36,7 @@ function AppContextProvider({ children }) {
     t_comp: false,
   });
 
-  const [todoList, setTodoList] = useState([todo]);
+  const [todoList, setTodoList] = useState([]);
 
   // Reference 변수선언하기
   // nextId : 순서기입,    inputId : 입력박스 경고창 후 커서위치 위해 사용할 변수
